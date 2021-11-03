@@ -11,7 +11,7 @@
 
 html {
   max-width: var(--a4-width);
-  margin: var(--abnt-margins);
+  margin: 2rem auto;
   font-family: "Roboto Mono", monospace;
   font-size: 62.5%;
 }
