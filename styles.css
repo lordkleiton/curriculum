@@ -16,6 +16,24 @@ html {
   font-size: 62.5%;
 }
 
+/* configurações da impressão da página */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html {
+    margin: 2cm 1.5cm;
+    max-width: var(--a4-width);
+    max-height: var(--a4-height);
+    height: 282mm;
+    background: #fff;
+    overflow: none;
+  }
+}
+
 body {
   font-size: 16px;
   font-size: 1.6rem;
@@ -25,15 +43,6 @@ p,
 h1,
 h4 {
   margin: 0;
-}
-
-@media print {
-  @page {
-    margin: 0;
-    max-width: var(--a4-width);
-    max-height: var(--a4-height);
-    font-family: "Roboto Mono", monospace;
-  }
 }
 
 .grid-container {
@@ -93,4 +102,8 @@ a {
   content: "•";
   color: var(--gray);
   margin: 0.5rem;
+}
+
+section {
+  margin: 1rem 0;
 }
