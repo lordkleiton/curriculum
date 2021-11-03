@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap");
+
+:root {
+  --a4-width: 21cm;
+  --a4-height: 29.7cm;
+  --abnt-margins: 2cm;
+  --subtitle-size: 0.85em;
+  --smaller-font-size: 0.9em;
+  --gray: #718096;
+}
+
+html {
+  max-width: var(--a4-width);
+  margin: var(--abnt-margins);
+  font-family: "Roboto Mono", monospace;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+p,
+h1,
+h4 {
+  margin: 0;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    max-width: var(--a4-width);
+    max-height: var(--a4-height);
+    font-family: "Roboto Mono", monospace;
+  }
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-container div {
+  padding: 0.5rem 0;
+}
+
+.left-content {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.subtitle {
+  color: var(--gray);
+  font-size: var(--subtitle-size);
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.smaller-font {
+  font-size: var(--smaller-font-size);
+}
+
+.thinner-font {
+  font-weight: 300;
+}
+
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ul-margin-left {
+  margin-left: 1rem;
+}
+
+.ul-margin-vertical {
+  margin-bottom: 0.7rem;
+}
+
+.ul-bullets li::before {
+  content: "•";
+  color: var(--gray);
+  margin: 0.5rem;
+}
